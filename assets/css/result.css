@@ -1,0 +1,80 @@
+.result-page { min-height: 100vh; }
+.result-hero { padding: 62px 0 28px; }
+.result-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr); gap: 22px; align-items: start; }
+.result-main-card, .result-side-card { border: 1px solid rgba(255,255,255,.9); background: rgba(255,255,255,.78); backdrop-filter: blur(16px); border-radius: 28px; box-shadow: var(--shadow); }
+.result-main-card { overflow: hidden; }
+.result-winner { display: grid; grid-template-columns: 1fr 280px; gap: 18px; align-items: center; padding: clamp(28px, 5vw, 48px); background: linear-gradient(145deg, rgba(232,250,253,.9), rgba(255,255,255,.92)); }
+.result-winner-copy .eyebrow { margin-bottom: 12px; }
+.result-winner h1 { margin: 0 0 10px; font-size: clamp(2.5rem, 5.4vw, 4.7rem); line-height: .98; letter-spacing: -.055em; color: var(--navy-deep); }
+.result-winner p { margin: 0; color: var(--ink-soft); font-size: 1.03rem; }
+.result-icon-wrap { aspect-ratio: 1; border-radius: 30px; background: rgba(255,255,255,.76); display: grid; place-items: center; border: 1px solid var(--border); box-shadow: var(--shadow-soft); position: relative; overflow: hidden; }
+.result-icon-wrap::before { content: ""; position: absolute; inset: 20%; border-radius: 50%; background: rgba(116,216,232,.22); filter: blur(18px); }
+.result-icon-wrap img { width: 70%; max-height: 70%; object-fit: contain; position: relative; z-index: 1; animation: floatSlow 5s ease-in-out infinite; }
+.result-body { padding: 32px clamp(24px, 5vw, 48px) 44px; }
+.result-section-title { margin: 0 0 16px; font-size: 1.45rem; color: var(--navy-deep); letter-spacing: -.025em; }
+.affinity-list { display: grid; gap: 13px; }
+.affinity-row { display: grid; grid-template-columns: minmax(150px, 220px) 1fr 58px; gap: 14px; align-items: center; }
+.affinity-name { display: flex; align-items: center; gap: 10px; min-width: 0; font-weight: 800; }
+.affinity-name img { width: 36px; height: 36px; object-fit: contain; border-radius: 9px; background: #eff8fa; padding: 5px; }
+.affinity-name span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.affinity-track { height: 11px; border-radius: 999px; background: #e6eff2; overflow: hidden; }
+.affinity-fill { height: 100%; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--blue), var(--cyan-strong)); transition: width .8s cubic-bezier(.2,.8,.2,1); }
+.affinity-value { font-weight: 900; color: var(--navy); text-align: right; }
+.affinity-caption { color: var(--ink-soft); font-size: .78rem; margin-top: 12px; }
+
+.podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 30px; }
+.podium-card { padding: 19px; border: 1px solid var(--border); border-radius: 20px; background: rgba(248,253,254,.86); }
+.podium-rank { display: inline-grid; place-items: center; width: 29px; height: 29px; border-radius: 9px; background: var(--navy); color: white; font-weight: 900; font-size: .8rem; margin-bottom: 12px; }
+.podium-card h3 { margin: 0 0 5px; font-size: 1.02rem; }
+.podium-card p { margin: 0; color: var(--ink-soft); font-size: .82rem; }
+
+.result-side-card { padding: 24px; position: sticky; top: 20px; }
+.result-side-card h2 { margin: 0 0 8px; font-size: 1.35rem; }
+.result-side-card > p { margin: 0 0 18px; color: var(--ink-soft); font-size: .9rem; }
+.profile-chip { display: flex; align-items: center; gap: 11px; padding: 13px; border-radius: 16px; background: #eff8fa; margin-bottom: 18px; }
+.profile-avatar { width: 42px; height: 42px; border-radius: 13px; display: grid; place-items: center; color: white; background: linear-gradient(135deg, var(--navy), var(--cyan-strong)); font-weight: 900; }
+.profile-chip strong, .profile-chip span { display: block; }
+.profile-chip span { color: var(--ink-soft); font-size: .76rem; margin-top: 2px; }
+.result-actions { display: grid; gap: 9px; }
+.result-actions .button { width: 100%; }
+.side-note { margin-top: 18px; padding: 14px; border-radius: 14px; background: #fff8df; color: #684f18; font-size: .77rem; border: 1px solid #f1dea0; }
+
+.result-detail { margin-top: 22px; padding: 28px; border: 1px solid var(--border); background: rgba(255,255,255,.72); border-radius: 24px; box-shadow: var(--shadow-soft); }
+.result-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.result-detail h2 { margin: 0 0 12px; font-size: 1.5rem; }
+.result-detail p { color: var(--ink-soft); }
+.result-detail ul { margin: 10px 0 0; padding-left: 20px; color: var(--ink-soft); }
+.result-detail li { margin: 7px 0; }
+.next-step { padding: 18px; border-radius: 17px; background: #edf9fb; border: 1px solid rgba(43,184,207,.16); }
+.next-step strong { display: block; color: var(--navy); margin-bottom: 5px; }
+.next-step p { margin: 0; font-size: .9rem; }
+
+.no-result { min-height: 520px; display: grid; place-items: center; text-align: center; padding: 32px; }
+.no-result > div { max-width: 620px; }
+.no-result h1 { margin: 0 0 10px; font-size: clamp(2.2rem, 5vw, 4rem); color: var(--navy-deep); }
+.no-result p { color: var(--ink-soft); }
+.no-result .button { margin-top: 14px; }
+
+@media print {
+  .site-header, .site-footer, .result-actions, .snow-layer { display: none !important; }
+  body { background: white; opacity: 1 !important; }
+  .result-layout { grid-template-columns: 1fr; }
+  .result-side-card { position: static; box-shadow: none; }
+  .result-main-card, .result-detail, .result-side-card { box-shadow: none; background: white; border: 1px solid #bbb; }
+}
+
+@media (max-width: 900px) {
+  .result-layout { grid-template-columns: 1fr; }
+  .result-side-card { position: static; }
+  .result-winner { grid-template-columns: 1fr 200px; }
+}
+
+@media (max-width: 650px) {
+  .result-hero { padding-top: 40px; }
+  .result-winner { grid-template-columns: 1fr; text-align: center; }
+  .result-icon-wrap { width: 170px; justify-self: center; order: -1; }
+  .affinity-row { grid-template-columns: minmax(120px, 1fr) 56px; }
+  .affinity-track { grid-column: 1 / -1; grid-row: 2; }
+  .podium { grid-template-columns: 1fr; }
+  .result-detail-grid { grid-template-columns: 1fr; }
+}

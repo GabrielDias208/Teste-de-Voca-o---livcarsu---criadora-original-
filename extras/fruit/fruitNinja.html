@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cube Ninja — Vocação Polar</title>
+</head>
+<body>
+<!-- Game canvas -->
+<canvas id="c"></canvas>
+
+<!-- Gameplay HUD -->
+<div class="hud">
+	<div class="hud__score">
+		<div class="score-lbl"></div>
+		<div class="cube-count-lbl"></div>
+	</div>
+	<div class="pause-btn"><div></div></div>
+	<div class="slowmo">
+		<div class="slowmo__bar"></div>
+	</div>
+</div>
+
+<!-- Menu System -->
+<div class="menus">
+	<div class="menu menu--main">
+		<h2>Dê uma pausa...</h2>
+        <h1>Divirta-se!</h1>
+		<button type="button" class="play-normal-btn">Comece o jogo!</button>
+		<button type="button" class="play-casual-btn"></button>
+	</div>
+	<div class="menu menu--pause">
+		<h1></h1>
+		<button type="button" class="resume-btn"></button>
+		<button type="button" class="menu-btn--pause"></button>
+	</div>
+	<div class="menu menu--score">
+		<h1>VocÊ conseguiu desbloquear uma nova fase!</h1>
+		<h2>Seu Score:</h2>
+		<div class="final-score-lbl"></div>
+		<div class="high-score-lbl"></div>
+		<button type="button" class="play-again-btn">Passe para a próxima fase</button>
+		<button type="button" class="menu-btn--score"></button>
+	</div>
+</div>
+<a href="../../desafios.html" style="position:fixed;left:16px;top:16px;z-index:9999;padding:10px 14px;border-radius:12px;background:rgba(10,25,45,.82);color:#fff;text-decoration:none;font:700 14px system-ui">← Voltar aos desafios</a>
+    
+
+<script src="tetste.js"></script>
+
+
+</body>
+</html>
